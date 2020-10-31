@@ -11,18 +11,19 @@ jobs:
           submodules: 'true'
       - uses: actions/setup-java@v1
         with: {java-version: 11}
-      - name: save html
-        run: |
-          cp -r ./deploy_js/ /tmp/docs
+      - run: |
+          ./production-js.sh
+      - run: |
+          mv ./production-js /tmp/docs
           ls -la /tmp/docs
       - run: rm -rf ./*
       - uses: actions/checkout@v2.1.0
         with:
           ref: github-pages
-      - run: |
-          ls -la docs
+      - name: update docs
+        run: |
           rm -rf docs
-          cp -r /tmp/docs docs
+          mv /tmp/docs docs
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
