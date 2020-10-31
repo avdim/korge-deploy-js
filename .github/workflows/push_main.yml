@@ -14,8 +14,7 @@ jobs:
       - name: save html
         run: |
           mkdir /tmp/deploy_js
-          cp -r ./deploy_js /tmp/deploy_js
-          cat korge-next/settings.gradle.kts
+          cp -r ./deploy_js /tmp/deploy_js/
           ls -la /tmp/deploy_js
 #      - name: Commit files
 #        run: |
@@ -27,3 +26,4 @@ jobs:
 #        uses: ad-m/github-push-action@master
 #        with:
 #          github_token: ${{ secrets.GITHUB_TOKEN }}
+
