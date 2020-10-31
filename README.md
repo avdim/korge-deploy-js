@@ -23,7 +23,7 @@ git pull
 
 ## Deploy
 When you push to main branch - deploy process will start with GitHub Actions.  
-Result will be available on link: #TODO link
+Result will be available on link: https://avdim.github.io/korge-deploy-js/
 
 
 ##P.S.

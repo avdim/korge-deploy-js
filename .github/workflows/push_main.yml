@@ -21,14 +21,17 @@ jobs:
           ref: github-pages
       - run: |
           ls -la docs
-#      - name: Commit files
-#        run: |
-#          git config --local user.email "action@github.com"
-#          git config --local user.name "GitHub Action"
-#          git add docs
-#          git commit -m "Add changes"
-#      - name: Push changes
-#        uses: ad-m/github-push-action@master
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
+          cat docs/index.html
+          rm -rf docs
+          cp -r /tmp/docs docs
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs
+          git commit -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
