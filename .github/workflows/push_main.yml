@@ -6,10 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2.1.0
       - uses: actions/setup-java@v1
         with: {java-version: 11}
-      - run: git submodule init && git submodule update
       - name: save html
         run: |
           mkdir /tmp/deploy_js
