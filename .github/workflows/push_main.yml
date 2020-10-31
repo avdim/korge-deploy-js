@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-java@v1
         with: {java-version: 11}
+      - run: git submodule init && git submodule update
       - name: save html
         run: |
           mkdir /tmp/deploy_js
