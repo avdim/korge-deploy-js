@@ -1,4 +1,4 @@
-#GitHub Game Hackathon 2020 with KorGE
+# GitHub Game Hackathon 2020 with KorGE
   
 JS game: https://avdim.github.io/korge-deploy-js/
   
