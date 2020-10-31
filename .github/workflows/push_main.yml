@@ -13,8 +13,14 @@ jobs:
         with: {java-version: 11}
       - name: save html
         run: |
-          cp -r ./deploy_js/ /tmp/
-          ls -la /tmp/deploy_js
+          cp -r ./docs/ /tmp/
+          ls -la /tmp/docs
+      - run: rm -rf .
+      - uses: actions/checkout@v2.1.0
+        with:
+          ref: github-pages
+      - run: |
+          ls -la docs
 #      - name: Commit files
 #        run: |
 #          git config --local user.email "action@github.com"
