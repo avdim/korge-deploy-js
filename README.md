@@ -9,7 +9,9 @@ On Windows you need to write your own scripts.
 ```git submodule init && git submodule update```
  - run jvm version: ```./jvm.sh```
  - or JS version: ```./js.sh``` 
- - open or import project directory with Intellij IDEA or Android Studio
+ - open project directory with Intellij IDEA
+ - In Project view (left panel) find file korge-next/build.gradle.kts, with context menu choose "Import Gradle Project"
+ - Done, you may edit hackathon module
 
 ## How to update to latest KorGE version:
 ```bash
