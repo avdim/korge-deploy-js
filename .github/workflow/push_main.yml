@@ -13,6 +13,7 @@ jobs:
         run: |
           mkdir /tmp/deploy_js
           cp -r ./deploy_js /tmp/deploy_js
+          cat korge-next/settings.gradle.kts
           ls -la /tmp/deploy_js
 #      - name: Commit files
 #        run: |
