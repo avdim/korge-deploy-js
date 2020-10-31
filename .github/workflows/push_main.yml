@@ -13,8 +13,8 @@ jobs:
         with: {java-version: 11}
       - name: save html
         run: |
-          mkdir /tmp/deploy_js
-          cp -r ./deploy_js/ /tmp/deploy_js/
+          mkdir -p /tmp/deploy_js
+          cp -r deploy_js/ /tmp/deploy_js/
           ls -la /tmp/deploy_js
 #      - name: Commit files
 #        run: |
