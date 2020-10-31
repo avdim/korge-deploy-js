@@ -13,7 +13,7 @@ jobs:
         with: {java-version: 11}
       - name: save html
         run: |
-          cp -r ./docs/ /tmp/
+          cp -r ./deploy_js/ /tmp/docs
           ls -la /tmp/docs
       - run: rm -rf .
       - uses: actions/checkout@v2.1.0
